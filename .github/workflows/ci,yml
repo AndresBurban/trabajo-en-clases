@@ -1,0 +1,30 @@
+name: validacion pagina
+
+on:
+
+  push:
+    branches:
+      ["main"]
+  pull_request:
+    branches:
+      ["main"]
+
+job:
+  validacion:
+    name: crear una maquina virtual
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: instalar node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 25
+      
+      - name: validar codigo html
+        run: |
+          echo "inicio"
+          mpx html-validate "**/*.html"
+          echo "fin"
