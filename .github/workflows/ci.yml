@@ -4,10 +4,10 @@ on:
 
   push:
     branches:
-      ["main, prueba"]
+      ["main", "prueba"]
   pull_request:
     branches:
-      ["main, prueba"]
+      ["main", "prueba"]
 
 jobs:
   validacion:
