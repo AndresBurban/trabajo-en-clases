@@ -26,5 +26,5 @@ jobs:
       - name: validar codigo html
         run: |
           echo "inicio"
-          mpx html-validate "**/*.html"
+          npx html-validate "**/*.html"
           echo "fin"
